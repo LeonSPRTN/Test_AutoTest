@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>@ViewData["Message"]</p>
+
+    <table>
+        <tr>
+            <th>ИД</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Возраст</th>
+        </tr>
+        @foreach (var item in ViewBag.Users)
+        {
+            <tr>
+                <th>@item.Id</th>
+                <th>@item.FirstName</th>
+                <th>@item.LastName</th>
+                <th>@item.Age</th>
+            </tr>
+        }
+    </table>
+
+</div>
